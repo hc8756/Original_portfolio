@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Ashley's Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Coming+Soon&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  
+  <div id="wrapperDiv">
+    <div id="logoDiv">
+      <h1>Ashley's Portfolio</h1>
+      <img src="images/logo.gif" alt="website logo">
+      <p>Programmer & Artist</p>
+    </div>
+    <div id="menuDiv">
+      <ul class="menu">
+        
+        <li><a href="#gamesDiv">VIDEO GAMES</a></li>
+        <li><a href="#projectsDiv">Projects</a></li>
+        <li><a href="#artDiv">ART</a></li>
+        <li><a href="#otherDiv">OTHER</a></li>
+        <li><a href="#aboutDiv">ABOUT ME</a></li>
+        <li><a href="#contactDiv">CONTACT</a></li>
+        <li><a href="https://drive.google.com/file/d/11LKUrEpLshObG7D7XOxD2ATQDXMWuznT/view?usp=sharing">RESUME</a></li>
+      </ul>
+      
+    </div>
+    
+    <div id="projectsDiv">
+      <h2>MY WORK</h2>
+
+      <h3 id="gamesDiv">Video Games</h3>
+      <section class="projectSection" id="brickBreakerSection">
+        <h4 class="projectTitle"><a href="https://people.rit.edu/kst4052/235/project-3-bricks/game.html">Brick Breaker</a></h4>
+        <img class="projectImage" id="game1Pic" src="https://via.placeholder.com/150"  alt="screenshot/gif of video game">
+        <p class="projectText">This brick breaker game uses PixiJS and HTML. Players use a paddle to bounce a ball off of the walls and hit bricks to gain points. Collaboration with Kaitlyn Tran.</p>
+      </section>
+
+      <section class="projectSection" id="captainBobbySection">
+        <h4 class="projectTitle"><a href="https://people.rit.edu/hc8756/235/captainBobby/">Captain Bobby's Revenge</a></h4>
+        <img class="projectImage" id="game1Pic" src="images/captainBobby.png"  alt="screenshot/gif of video game">
+        <p class="projectText">A playful underwater 2D side-scrolling shoot-em-up where you play a submarine. Fight gun-wielding fish. Collaboration with 3 other students.</p>
+      </section>
+
+      <h3 id="artDiv">Art</h3>
+      <section class="projectSection" id="candyCrushSection">
+        <h4 class="projectTitle"><a href="https://www.youtube.com/watch?v=TYaR7OXRc4M">Candy Crush</a></h4>
+        <img class="projectImage" id="art1Pic" src="https://via.placeholder.com/150"  alt="screenshot/gif of artwork">
+        <p class="projectText">A short 3D highschool film made with friends. Laughably simple plot and horrifying graphics- we were learning on the fly but I look back at the memory fondly.</p>
+      </section>
+
+      <section class="projectSection" id="businessCardSection">
+        <h4 class="projectTitle"><a href="https://drive.google.com/file/d/10DCnaLbvZyNB1pqiMPxGwcGfyHV5iN00/view?usp=sharing">Business Card</a></h4>
+        <img class="projectImage" id="art1Pic" src="images/businessCard.png"  alt="screenshot/gif of artwork">
+        <p class="projectText">Business card for myself created on InDesign- I wanted something simple and playful.</p>
+      </section>
+      
+
+      <h3 id="otherDiv">Other</h3>
+      <section class="projectSection" id="gifFinderSection">
+        <h4 class="projectTitle"><a href="https://people.rit.edu/hc8756/235/project2/">GIF Finder</a></h4>
+        <img class="projectImage" src="images/project_images/gifFinder.PNG"  alt="screenshot/gif of project">
+        <p class="projectText">This simple site uses a GIPHY API in order to retrieve GIFs corresponding to the user's search.Collaboration with Kaitlyn Tran.</p>
+      </section>
+    </div>
+    <div id="aboutDiv">
+      <h2>ABOUT ME</h2>
+      <p>Hi! My name is Ashley and I'm a second year game design student from South Korea. My interest in programming and interactive entertainment brought me here, and my goal is to find a career where I can code and be creative.</p>
+      <img src="images/me.jpg" alt="image of me">
+      <p>This website is a collection of my projects so far. It includes video games, artworks, and other coding endeavors. I hope you like it and have a nice day :)</p>
+    </div>
+    <div id="contactDiv">
+      <h2>CONTACT ME</h2>
+      <p id="phone">PHONE:585-729-0653</p>
+      <p id="phone">EMAIL:hc8756@rit.edu</p>
+      <p>Shoot me a message!</p>
+      
+      <form action="https://formspree.io/mvowgjjr" method="POST">
+      <label>Your email:
+        <input type="text" class="sender" name="sender"><br><br>
+      </label>      
+      <label>Your message:
+        <textarea type="text" class="message" name="message"></textarea><br><br>
+      </label>
+        <button type="submit" class="SubmitButton">Submit</button>
+      </form>
+
+      <p id="emailStatus" class="status"></p>
+      <p id="messageStatus" class="status"></p>
+    </div>
+
+    <div id="goUpDiv">
+      <a href="#logoDiv" id="goUp">
+        <img src="images/ufo.png" alt="button that takes you up">
+        <img src="images/floatingRaccoon.png" alt="part of buttoon that takes you up">
+      </a>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

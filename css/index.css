@@ -1,0 +1,270 @@
+body{
+    background-color: #f9f9f9;
+    margin:0px;
+    padding:0px;
+    font-family: 'Coming Soon', sans-serif;
+}
+h2,h3{
+    text-align: center;
+}
+#wrapperDiv{
+    position:absolute;
+    margin:0px;
+    display: grid;
+    grid-template-areas: 
+    "Logo"
+    "Menu"
+    "Projects"
+    "AboutMe"
+    "Contact"
+    "GoUp"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: auto 8vh auto 100vh 100vh auto;
+}
+
+#logoDiv{
+    grid-area: Logo; 
+}
+h1{
+    text-indent: -9999px;
+}
+#logoDiv img{
+    display:block;
+    margin:auto;
+    margin-top: -50px;
+    height:30vh;
+}
+#logoDiv p{
+   text-align: center;
+}
+
+#menuDiv{
+    z-index:2;
+    background-color: black;
+    grid-area: Menu;
+    padding-top:5px;
+}
+ul.menu{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+ul.menu li a{
+    
+    color: #f9f9f9;
+    text-align: center;
+    text-decoration: none;
+}
+
+ul.menu li a:hover{
+    border-bottom: 3px solid rgb(255, 194, 153);
+}
+
+.menu li:nth-child(2) {
+    display: none;
+}
+
+
+#projectsDiv{
+    grid-area:Projects;
+}
+/*make this part clickable once projects are added*/
+.projectSection{
+    display:grid;
+    overflow: auto;
+    grid-template-areas: 
+    "picture title"
+    "picture text";
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 30% 70%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    border: 1px solid black;
+    width:45%;
+    height:300px;
+}
+.projectSection:hover{
+    background-color:#FFD6BA;
+}
+.projectSection h4{
+    grid-area: title;
+    border-bottom: 3px solid #a6b676;
+}
+.projectSection a{
+    text-decoration: none;
+    color:black;
+}
+.projectSection img{
+    grid-area: picture;
+    width:90%;
+    height:100%;
+    
+}
+.projectSection p{
+    grid-area: text;
+    padding-right:10px;
+}
+#artDiv,#otherDiv{margin-top:140px;}
+
+#aboutDiv{
+    
+    background-color: #ffebef;
+    border-top: 1px solid black;
+    color:black;
+    grid-area:AboutMe;
+
+}
+#contactDiv{
+    background-color:#e9f6c3;
+    border-top: 1px solid black;
+    color:black;
+    grid-area:Contact;
+    text-align: center;
+    position:relative;
+}
+
+
+#contactDiv form{
+    text-align: center;
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+
+}
+
+#contactDiv button{
+    text-align: center;
+    width:40%;
+    height: 40px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    
+}
+
+.message{
+    
+    width: 90%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: white;
+    resize: none;
+}
+#aboutDiv p{
+    text-align: center;
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+
+}
+#aboutDiv img{
+    width:30%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+}
+
+
+#goUpDiv{
+    grid-area: GoUp;
+    position:fixed;
+    bottom:0px;
+    right:0px;
+}
+#goUpDiv img:first-of-type{
+    position:absolute;
+    z-index:0;
+    height: 300px;
+    width: 290px;
+    bottom:0px;
+    right:0px;
+}
+
+
+#goUpDiv img:nth-of-type(2){
+    animation: MoveUpDown 2s linear infinite;
+    position: absolute;
+    z-index: 1;
+    height: 150px;
+    width: 90px;
+    bottom:80px;
+    right:110px;
+}
+
+.status{
+    color: red;
+}
+@keyframes MoveUpDown{
+    0%,100%{bottom:80px;}
+    50%{bottom:90px;}
+}
+
+@media only screen and (max-width:1050px){
+#goUpDiv{
+    visibility: hidden;
+}
+#projectsDiv, #aboutDiv, #contactDiv{
+    padding-top:50px;
+}
+#menuDiv{
+    position:sticky;
+    top:0px;
+}
+.projectSection{
+    display:grid;
+    width:70%;
+    height: 70vh;
+    overflow: auto;
+    grid-template-areas: 
+    "picture"
+    "title"
+    "text"
+    ;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 10% 40%;
+}
+.projectSection img{
+    width:100%;
+    
+}
+.projectSection h4{
+    border:none;
+    text-align: center;
+}
+.projectSection p{
+    text-align: center;
+    padding:0;
+}
+#aboutDiv img{
+    width:50%;
+}
+#aboutDiv p{
+    width:70%;
+}
+
+.menu li:nth-child(1) {
+display: none;
+}
+
+.menu li:nth-child(2) {
+display: inline-block;
+}
+.menu li:nth-child(3) {
+display: none;
+}
+
+.menu li:nth-child(4) {
+display: none;
+}
+
+}
